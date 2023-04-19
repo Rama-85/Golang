@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	fmt.Println(evenNumbers(20))
+
+}
+
+func evenNumbers(x int) []int {
+	even := []int{}
+	for i := 0; i < x; i += 2 {
+		if i%2 == 0 {
+			even = append(even, i)
+		}
+	}
+  return even
+  }
