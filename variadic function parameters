@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+)
+func main() {
+	num := []int{76, 98, 43, 54, 67, 88}
+	fmt.Println("least number is", least(num...))
+}
+
+func least(num ...int) int {
+	lowest := num[0]
+	for _, v := range num {
+		if v < lowest {
+			lowest = v
+		}
+	}
+	return lowest
+}
