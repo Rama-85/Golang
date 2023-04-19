@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	marks := []int{98, 99, 76, 48, 66, 88}
+	total, average, highest := f(marks)
+	fmt.Println("total marks are", total, "average is", average, "highest is", highest)
+}
+
+func f(marks []int) (int, int, int) {
+	total := 0
+	for _, v := range marks {
+		total = total + v
+	}
+
+	highest := marks[0]
+	for _, v := range marks {
+		if v > highest {
+			highest = v
+		}
+	}
+	return total, total / len(marks), highest
+}
