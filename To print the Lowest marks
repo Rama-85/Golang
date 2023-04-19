@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	StuMarks := make(map[string]int)
+	StuMarks["Alice"] = 98
+	StuMarks["Bob"] = 45
+	StuMarks["Charle"] = 35
+
+	lowest := StuMarks["Bob"]
+	var sName string
+
+	for name, marks := range StuMarks {
+		if marks < lowest {
+			lowest = marks
+			sName = name
+		}
+	}
+	fmt.Println(lowest, sName)
+}
